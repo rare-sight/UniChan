@@ -19,10 +19,10 @@ function App() {
 function NavLinks() {
   return (
     <div className="nav-links">
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-      <a href="#">Privacy</a>
-      <a href="https://github.com/yourrepo" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+      <a href="/privacy">Privacy</a>
+      <a href="https://github.com/rare-sight/UniChan" target="_blank" rel="noopener noreferrer">GitHub</a>
     </div>
   );
 }
