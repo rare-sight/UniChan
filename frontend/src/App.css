@@ -11,17 +11,21 @@ body {
   pointer-events: none;
   position: absolute;
   top: 10px;
-  left: 10px;
+  left: 50px;
 }
 
-@media (max-width: 768px) {
+@media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    height: 8vmin;
-    left: 15px;
+    animation: App-logo-spin infinite 7s linear;
   }
+}
 
-  .App-header h1 {
-    font-size: 2rem;
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 
@@ -40,7 +44,6 @@ body {
   font-size: 18px;
   color: white;
   position: relative;
-  padding-top: 30px;
 }
 
 /* Navigation Links */
@@ -50,15 +53,12 @@ body {
   right: 20px;
   display: flex;
   gap: 15px;
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
-  justify-content: flex-end; /* Align the links to the right */
 }
 
 .nav-links a {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  white-space: nowrap; /* Prevent text wrapping within links */
 }
 
 .nav-links a:hover {
