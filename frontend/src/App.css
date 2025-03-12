@@ -11,21 +11,13 @@ body {
   pointer-events: none;
   position: absolute;
   top: 10px;
-  left: 50px;
+  left: 10px; /* Ensure the logo stays in the top-left corner */
 }
 
-@media (prefers-reduced-motion: no-preference) {
+@media (max-width: 768px) {
   .App-logo {
-    animation: App-logo-spin infinite 7s linear;
-  }
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+    height: 8vmin; /* Smaller size for mobile */
+    left: 15px;    /* Keep the logo slightly away from the left edge */
   }
 }
 
@@ -43,7 +35,8 @@ body {
   justify-content: center;
   font-size: 18px;
   color: white;
-  position: relative;
+  position: relative; /* Keep this relative for absolute positioning inside */
+  padding-top: 30px; /* Add padding for better spacing */
 }
 
 /* Navigation Links */
@@ -162,4 +155,41 @@ input[type="file"] {
   color: white;
   border-radius: 4px;
   cursor: pointer;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .App-logo {
+    height: 8vmin; /* Smaller logo for mobile */
+    left: 15px;    /* Slightly move it from the edge */
+  }
+
+  .App-header h1 {
+    font-size: 2rem; /* Smaller heading font size */
+  }
+
+  .nav-links {
+    position: relative;
+    top: auto;
+    flex-direction: column; /* Stack navigation links vertically */
+    align-items: center;
+    gap: 10px;
+  }
+
+  .board-table {
+    width: 95%; /* More responsive table width */
+  }
+
+  .post {
+    width: 90%; /* Ensure posts are responsive */
+  }
+
+  textarea {
+    width: 95%; /* Adjust textarea width on mobile */
+  }
+
+  button {
+    width: 100%; /* Make buttons full-width on mobile */
+    font-size: 16px;
+  }
 }
