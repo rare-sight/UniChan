@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Link, useParams } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import leaf from "./leaf.svg";
 import "./App.css";
@@ -16,6 +16,9 @@ function App() {
           <Routes>
             <Route path="/" element={<BoardTable />} />
             <Route path="/:board" element={<BoardPage />} />
+            <Route path="/about" element={<UnderConstruction />} />
+            <Route path="/contact" element={<UnderConstruction />} />
+            <Route path="/privacy" element={<UnderConstruction />} />
           </Routes>
         </main>
       </div>
@@ -146,6 +149,15 @@ function BoardPage() {
           <button onClick={() => handleDelete(post.id)}>Delete</button>
         </div>
       ))}
+    </div>
+  );
+}
+
+function UnderConstruction() {
+  return (
+    <div className="under-construction">
+      <h2>Page Under Construction</h2>
+      <p>Sorry, this page is currently under construction. Check back later!</p>
     </div>
   );
 }
